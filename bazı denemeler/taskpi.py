@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
+from typing import List
 
 app = FastAPI()
 
@@ -31,3 +32,9 @@ def update(task_id: int, task: Task):
     return {"message": "Task not found"}, 404
 
 
+@app.post("/api/task")
+def create(task: Task):
+    """Yeni görev ekle"""
+    task.id = len(tasks) + 1  # ID otomatik oluştur
+    tasks.append(task)
+    return {"message": "Task created successfully", "task": task}
