@@ -1,0 +1,1 @@
+# Readme dökümantasyonuna entegre olma işlemlerinde kendimi geliştirebilmek adına yapmam gereken birkaç adım olduğunu önsezi edebilecek kadar yazılım üzerinde yapmış olduğum çalışmaları analiz edebilecek kadar bir bilgi birikimine sahip olabilmek için varoluşsal sancılarımı bir kenara bırakarak bu README.md dosyasını oluşturuyorum.
