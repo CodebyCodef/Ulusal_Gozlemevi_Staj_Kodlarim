@@ -1,12 +1,14 @@
 syntax = "proto3";
 
 // Servis Tanımı (Fonksiyonlar)
+
 service UrunServisi {
   rpc UrunEkle (UrunEkleIstegi) returns (UrunYaniti) {}
   rpc UrunleriListele (BosIstek) returns (UrunListesiYaniti) {}
 }
 
 // Mesaj Tanımları (Veri Paketleri)
+
 message UrunEkleIstegi {
   string ad = 1;
   float fiyat = 2;
