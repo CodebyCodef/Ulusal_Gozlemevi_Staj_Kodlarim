@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+// Servis Tanımı (Fonksiyonlar)
+service UrunServisi {
+  rpc UrunEkle (UrunEkleIstegi) returns (UrunYaniti) {}
+  rpc UrunleriListele (BosIstek) returns (UrunListesiYaniti) {}
+}
+
+// Mesaj Tanımları (Veri Paketleri)
+message UrunEkleIstegi {
+  string ad = 1;
+  float fiyat = 2;
+  bool stokta_mi = 3;
+}
+
+message UrunYaniti {
+  int32 id = 1;
+  string ad = 2;
+  float fiyat = 3;
+  bool stokta_mi = 4;
+  string mesaj = 5; // Bunu eklemeyi unutma!
+}
+
+message BosIstek {}
+
+message UrunListesiYaniti {
+  repeated UrunYaniti urunler = 1;
+}
