@@ -1,0 +1,54 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# =========================
+# Virtual Environment
+# =========================
+venv/
+env/
+.venv/
+
+# =========================
+# IDE
+# =========================
+.vscode/
+.idea/
+*.swp
+
+# =========================
+# Environment Variables
+# =========================
+.env
+.env.*
+
+# =========================
+# SQLite
+# =========================
+*.db
+*.sqlite3
+
+# =========================
+# Alembic
+# =========================
+alembic/versions/__pycache__/
+
+# Eğer migration'ları repoya koymak istemiyorsan:
+# alembic/versions/
+
+# =========================
+# Logs
+# =========================
+*.log
+
+# =========================
+# OS Files
+# =========================
+.DS_Store
+Thumbs.db
