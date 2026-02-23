@@ -22,6 +22,7 @@ class CarCreate(BaseModel):
 
     model: str
     year: int
+    maker: str
 
 class Car(CarCreate):
     id: int
@@ -32,7 +33,7 @@ class Car(CarCreate):
 
 @app.post("/car", response_model=Car)
 def create_car(car:CarCreate, db: Session = Depends(get_db)):
-    db_car = Cars(model=car.model, year=car.year)
+    db_car = Cars(model=car.model, year=car.year, maker=car.maker)
     db.add(db_car)
     db.commit()
     db.refresh(db_car)
